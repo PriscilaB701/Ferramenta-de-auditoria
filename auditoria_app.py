@@ -327,11 +327,23 @@ class NCTab(QWidget):
         self.input_resp.clear()
         self.input_grav.setCurrentIndex(0)
         self.input_prazo.clear()
+
         if self.combo_item.isEnabled():
             self.combo_item.setCurrentIndex(0)
 
+
     def limpar_tudo(self):
+    # limpa campos
         self.limpar_campos()
+
+    # reseta o combo
+        self.combo_item.clear()
+        self.combo_item.addItem("Nenhum item marcado como 'Não' ainda")
+        self.combo_item.setEnabled(False)
+
+    # limpa tabela COMPLETA
+        self.tabela.setRowCount(0)
+
         
 # ============================================
 #              JANELA GRAVIDADES
