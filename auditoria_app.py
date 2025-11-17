@@ -311,8 +311,8 @@ class NCTab(QWidget):
         status_combo.addItems(["Pendente", "Em andamento", "Concluída"])
         self.tabela.setCellWidget(linha, 5, status_combo)
 
-        remetente = "priscilaliu62@gmail.com"
-        senha = "jduc rqfh jtnb gwtj"
+        remetente = "" #configuraçao email
+        senha = ""
         assunto = f"Nova Não Conformidade - {grav}"
         mensagem = f"Item: {item_checklist}\nDescrição: {desc}\nGravidade: {grav}\nPrazo: {prazo}"
 
@@ -484,3 +484,4 @@ if __name__ == "__main__":
     janela = AuditoriaApp()
     janela.show()
     sys.exit(app.exec())
+
